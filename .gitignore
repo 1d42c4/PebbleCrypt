@@ -1,0 +1,17 @@
+/target/
+/dist/
+/outputs/
+/.vs/
+*.exe
+*.dll
+*.pdb
+*.obj
+*.lib
+*.exp
+*.msi
+*.zip
+*.7z
+.env
+.env.*
+*.age
+.pebblecrypt-*.partial

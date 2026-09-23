@@ -1,0 +1,118 @@
+warn: could not canonicalize path <user-profile>
+warn: could not canonicalize path <user-profile>
+   Compiling pebblecrypt v0.1.2 (<project>)
+    Finished `release` profile [optimized] target(s) in 2.11s
+warn: could not canonicalize path <user-profile>
+   Compiling pebblecrypt v0.1.2 (<project>)
+    Finished `release` profile [optimized] target(s) in 13.29s
+     Running unittests src\main.rs (target\release\deps\pebblecrypt-220503512f692e22.exe)
+
+running 104 tests
+test app_tests::completed_batch_updates_results_and_releases_busy_state ... ok
+test app_tests::encryption_requires_files ... ok
+test app_tests::clear_password_removes_strings_flags_and_undo_state ... ok
+test app_tests::clear_queue_also_clears_secrets_errors_and_results ... ok
+test app_tests::encryption_requires_nonempty_password ... ok
+test app_tests::busy_app_ignores_new_file_selection ... ok
+test app_tests::encryption_rejects_short_password ... ok
+test app_tests::empty_selection_does_not_change_state ... ok
+test app_tests::generated_password_requires_saved_confirmation ... ok
+test app_tests::password_confirmation_must_match_exactly ... ok
+test app_tests::failed_preflight_keeps_password_for_retry ... ok
+test app_tests::partial_batch_error_preserves_completed_outputs ... ok
+test app_tests::progress_does_not_overwrite_cancelling_message ... ok
+test app_tests::multibyte_bytes_do_not_bypass_length_requirement ... ok
+test app_tests::short_external_password_can_be_decrypted ... ok
+test app_tests::selecting_same_mode_does_not_erase_password ... ok
+test app_tests::invalid_form_cannot_start_worker ... ok
+test app_tests::total_size_saturates_without_panicking ... ok
+test app_tests::switching_mode_clears_secrets ... ok
+test app_tests::regenerating_password_discards_previous_undo_state ... ok
+test app_tests::adding_only_age_files_selects_decrypt_and_clears_old_password ... ok
+test app_tests::twelve_unicode_characters_are_accepted ... ok
+test app_tests::unexpected_worker_disconnect_is_reported ... ok
+test batch::tests::cancellation_message_without_signal_is_an_error ... ok
+test batch::tests::cancellation_before_first_file_runs_no_jobs ... ok
+test batch::tests::cancellation_between_files_preserves_completed_result ... ok
+test batch::tests::cancellation_never_masks_disk_failure ... ok
+test batch::tests::cancellation_never_masks_cleanup_failure ... ok
+test batch::tests::cancellation_on_final_commit_reports_success ... ok
+test batch::tests::clean_cancellation_is_not_reported_as_error ... ok
+test batch::tests::empty_batch_is_safe ... ok
+test app_tests::folder_selection_is_rejected ... ok
+test batch::tests::error_stops_batch_and_keeps_prior_files ... ok
+test batch::tests::successful_batch_reports_all_outputs_in_order ... ok
+test batch::tests::progress_identifies_file_and_stage ... ok
+test crypto::audit_tests::empty_batch_is_rejected ... ok
+test crypto::audit_tests::empty_read_after_header_budget_is_valid ... ok
+test crypto::audit_tests::disk_full_is_reported ... ok
+test batch::tests::panic_stops_batch_and_keeps_prior_files ... ok
+test crypto::audit_tests::header_budget_stops_exactly_at_limit ... ok
+test app_tests::duplicate_selection_does_not_double_count_size ... ok
+test crypto::audit_tests::interrupted_reads_are_retried ... ok
+test app_tests::mixed_selection_defaults_to_encrypt ... ok
+test app_tests::generated_password_controls_fit_compact_window ... ok
+test app_tests::cancelled_without_outputs_remains_visible ... ok
+test app_tests::gui_cancel_button_signals_worker ... ok
+test app_tests::compact_long_filename_keeps_remove_button_visible ... ok
+test app_tests::gui_mode_button_clears_password ... ok
+test app_tests::gui_generate_button_updates_both_fields ... ok
+test app_tests::compact_empty_layout_has_visible_primary_controls ... ok
+test app_tests::gui_clear_button_clears_queue_and_password ... ok
+test crypto::audit_tests::arbitrary_extension_gets_decrypted_suffix ... ok
+test crypto::audit_tests::passwords_have_expected_length_alphabet_and_no_repeats_in_sample ... ok
+test crypto::audit_tests::read_error_is_reported ... ok
+test app_tests::rendering_uses_cached_sizes_after_source_disappears ... ok
+test crypto::audit_tests::empty_encryption_password_is_rejected ... ok
+test crypto::audit_tests::relative_inputs_produce_absolute_job_paths ... ok
+test crypto::audit_tests::short_reads_and_short_writes_are_handled ... ok
+test crypto::audit_tests::folder_input_is_rejected ... ok
+test crypto::audit_tests::duplicate_inputs_are_only_planned_once ... ok
+test crypto::audit_tests::cancellation_before_start_creates_nothing ... ok
+test crypto::audit_tests::directory_at_output_name_is_preserved ... ok
+test crypto::audit_tests::excessive_output_name_is_rejected_before_encryption ... ok
+test crypto::audit_tests::missing_input_is_rejected ... ok
+test crypto::audit_tests::zero_write_is_an_error ... ok
+test crypto::audit_tests::hidden_age_filename_remains_safe ... ok
+test crypto::audit_tests::external_recipient_key_file_is_rejected_cleanly ... ok
+test crypto::audit_tests::missing_output_directory_is_rejected ... ok
+test crypto::audit_tests::missing_source_leaves_no_temporary ... ok
+test crypto::audit_tests::regular_file_cannot_be_output_directory ... ok
+test crypto::audit_tests::output_equal_to_source_cannot_destroy_it ... ok
+test crypto::audit_tests::explicit_destination_is_used ... ok
+test crypto::audit_tests::source_already_open_for_writing_is_rejected ... ok
+test crypto::audit_tests::unavailable_output_parent_leaves_original ... ok
+test crypto::audit_tests::panic_during_processing_does_not_publish_partial_output ... ok
+test crypto::audit_tests::output_hard_link_to_source_cannot_destroy_it ... ok
+test crypto::audit_tests::direct_age_library_writer_can_be_read ... ok
+test crypto::audit_tests::uppercase_age_extension_is_removed ... ok
+test crypto::audit_tests::duplicated_ciphertext_chunk_is_rejected ... ok
+test crypto::audit_tests::repeated_collisions_get_distinct_suffixes ... ok
+test crypto::audit_tests::final_filename_is_absent_until_commit ... ok
+test crypto::audit_tests::progress_is_monotonic_and_finishes_after_commit ... ok
+test crypto::audit_tests::cancellation_after_committed_file_does_not_remove_it ... ok
+test crypto::audit_tests::failed_temporary_cleanup_is_reported_with_path ... ok
+test crypto::audit_tests::preexisting_output_preserved_in_both_modes ... ok
+test crypto::audit_tests::source_cannot_be_written_or_deleted_during_processing ... ok
+test crypto::tests::batch_names_handle_existing_files_and_duplicate_basenames ... ok
+test crypto::tests::never_overwrite_even_if_destination_appears_during_processing ... ok
+test crypto::audit_tests::swapped_ciphertext_chunks_are_rejected ... ok
+test crypto::audit_tests::payload_spliced_from_different_encryption_is_rejected ... ok
+test crypto::tests::randomization_and_password_generator ... ok
+test crypto::audit_tests::unicode_and_spaces_survive_planning_and_processing ... ok
+test crypto::audit_tests::password_whitespace_and_unicode_are_not_normalized ... ok
+test crypto::tests::cancel_midstream_cleans_up_for_both_modes ... ok
+test crypto::tests::wrong_password_corruption_truncation_and_appended_data_leave_no_output ... ok
+test crypto::audit_tests::large_file_is_processed_in_bounded_chunks ... ok
+test crypto::tests::round_trip_empty_unicode_and_multiple_chunk_boundaries ... ok
+test crypto::audit_tests::malformed_header_corpus_never_panics_or_publishes ... ok
+test crypto::audit_tests::every_truncation_of_a_small_file_is_rejected ... ok
+test crypto::tests::rejects_oversized_headers_and_excessive_scrypt_cost ... ok
+test crypto::audit_tests::deterministic_random_round_trips ... ok
+test crypto::audit_tests::every_single_byte_mutation_is_rejected ... ok
+test crypto::tests::production_work_factor_and_standard_age_compatibility ... ok
+test app_tests::real_worker_round_trip_and_partial_batch_failure ... ok
+
+test result: ok. 104 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.77s
+
+Formatting, Clippy, and all tests passed.

@@ -1,0 +1,37 @@
+warn: could not canonicalize path <user-profile>
+   Compiling pebblecrypt v0.1.1 (<project>)
+    Finished `release` profile [optimized] target(s) in 5.60s
+     Running unittests src\main.rs (target\release\deps\pebblecrypt-a55965b86bd75120.exe)
+
+running 4 tests
+
+thread 'crypto::audit_tests::empty_read_after_header_budget_is_valid' (12788) panicked at src\crypto_audit_tests.rs:23:37:
+called `Result::unwrap()` on an `Err` value: Custom { kind: InvalidData, error: "age header exceeds 64 KiB" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'crypto::audit_tests::interrupted_reads_are_retried' (19288) panicked at src\crypto_audit_tests.rs:16:88:
+called `Result::unwrap()` on an `Err` value: "Could not read or authenticate the file: operation interrupted"
+test crypto::audit_tests::empty_read_after_header_budget_is_valid ... FAILED
+test crypto::audit_tests::interrupted_reads_are_retried ... FAILED
+
+thread 'crypto::audit_tests::duplicate_inputs_are_only_planned_once' (14232) panicked at src\crypto_audit_tests.rs:43:5:
+assertion `left == right` failed
+  left: 2
+ right: 1
+
+thread 'crypto::audit_tests::relative_inputs_produce_absolute_job_paths' (14216) panicked at src\crypto_audit_tests.rs:34:5:
+assertion failed: jobs[0].input.is_absolute()
+test crypto::audit_tests::duplicate_inputs_are_only_planned_once ... FAILED
+test crypto::audit_tests::relative_inputs_produce_absolute_job_paths ... FAILED
+
+failures:
+
+failures:
+    crypto::audit_tests::duplicate_inputs_are_only_planned_once
+    crypto::audit_tests::empty_read_after_header_budget_is_valid
+    crypto::audit_tests::interrupted_reads_are_retried
+    crypto::audit_tests::relative_inputs_produce_absolute_job_paths
+
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 8 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--bin pebblecrypt`
