@@ -1,3 +1,9 @@
+
+
+<img width="901" height="697" alt="2026-09-23_13-09-39" src="https://github.com/user-attachments/assets/f560bf63-ae67-44a8-bb39-ff9376eebbcf" />
+
+
+
 # PebbleCrypt
 
 A small, offline Windows desktop file encryption app written in Rust, inspired by PicoCrypt's straightforward workflow.
